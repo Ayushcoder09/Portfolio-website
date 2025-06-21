@@ -87,9 +87,10 @@ export default function Hero() {
           <Button
             variant="outlined"
             color="primary"
-            href="/AyushResume.pdf"
+            href={`${import.meta.env.BASE_URL}AyushResume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
+            download
             sx={{
               borderColor: "#a259ff",
               color: "#a259ff",
