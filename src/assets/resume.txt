@@ -1,0 +1,68 @@
+Ayush Maheshwari
+Noida | Ayushmaheshwari09.am.am@gmail.com | 8279738095 |
+linkedin.com/in/ayush-maheshwari09 | github.com/Ayushcoder09
+Summary
+With 2.9 years of experience, I specialize in backend systems using Java Spring Boot, microservices, and front-end
+applications with Angular. Proficient in Agile methodologies and SDLC, I ensure efficient project management. My expertise
+includes GitHub for code management and Jenkins for CI/CD automation.
+Experience (2.9 Years)
+Full Stack Developer, Cognizant - Noida(Hybrid), Client - Health Care Service
+Corporation(HCSC)
+Oct 2024 – Present
+• Contributed to the development of a Single Page Application (SPA) based on micro-frontend architecture using Angular,
+enhancing user engagement by 15%.
+• Spearheaded backend microservices development using Java and Spring Boot, leading to a 25% improvement in system
+performance.
+• Collaborated daily with cross-functional teams, utilizing tools such as GitHub to ensure project success, resulting in a 20%
+increase in code quality and efficiency.
+• Utilized CI/CD tools like Jenkins, PCF, and UCD to automate the deployment process, reducing deployment time by 30%.
+Full Stack Developer, Cognizant - Noida(Hybrid), Client - Excellus BCBS Aug 2022 – Oct 2024
+• Enhanced user engagement by developing a dynamic provider page using JavaScript, Core Java, and Spring MVC, leading
+to 20% increase in data collection efficiency.
+• Improved Veracode & Sonar code performance score from 60% to 83% by optimizing Java and JavaScript logic across
+multiple pages.
+• Improved user experience by developing and implementing JavaScript input fields on the claim page with enhanced
+jQuery-based validation reducing input errors by 15%.
+• Ensured high-quality production releases by conducting comprehensive User Acceptance Testing (UAT) and orchestrating
+smooth deployments on Microsoft Azure.
+• Enhanced application quality and usability by incorporating stakeholders feedback into iterative improvements throughout
+development lifecycle.
+Personal Projects
+TaskMinder (Using Spring Boot and React) TaskMinderApp - Link
+• Enhanced frontend efficiency by implementing modular UI with React components, hooks, and props achieving a 20%
+reduction in load times.
+• Implemented RESTful APIs in Spring Boot to handle CRUD operations (Create, Read, Update, Delete) for managing todo
+items.
+• Integrated JSON Web Tokens (JWT) with Spring Security to establish stateless authentication for RESTful APIs.
+• Deployed Spring Boot App on AWS Elastic Beanstalk, React front end on Amazon S3 leveraging scalable infrastructure for
+reliable performance with 99.9% uptime.
+Analog Clock Analog Clock - Link
+• Created a visually engaging experience by utilizing CSS transforms to animate clock hands smoothly, achieving over 100
+views on Github.
+• Enhanced real-time functionality by implementing JavaScript event handling, enabling accurate and continuous time
+updates, leading to 80+ user interactions.
+Education
+Dr. A. P. J. Abdul Kalam Technical University
+BTech in Computer Science
+July 2018 – July 2022
+• CGPA: 8/10
+• Coursework: Data Structures and Algorithms, DBMS, Operating System
+Skills/Tools
+Languages: Java, SQL, JavaScript, TypeScript, HTML, CSS
+Skills: Angular, Spring Boot, JQuery, React, Maven, Node.js, Git, GitHub, MySQL, Jenkins, Swagger, Github Copilot, AWS,
+Azure Devops, Jira
+Certificates
+AWS Certified Cloud Practitioner Link
+AWS Cloud Practitioner Certified, Proficient in cloud computing concepts and AWS services including EC2, S3, RDS, Lambda, and
+IAM, with expertise in cloud architecture, security, and cost management.
+GitHub Copilot Link
+GitHub Copilot Certified, Demonstrated proficiency in leveraging AI-powered coding assistance to enhance development efficiency
+and code quality.
+GitHub Foundations Link
+Certified in GitHub Foundations, Demonstrating proficiency in version control, repository management, and collaborative
+development.
+Business English Certificate(BEC) by Cambridge Link
+Secured B2 grade which is equivalent to 9/10
+Achievements
+Recognized by Business Unit as Star of the Month in January and February 2025 at Cognizant for Outstanding Performance.
+Received client appreciation for significantly improving the UI’s visual appeal.
