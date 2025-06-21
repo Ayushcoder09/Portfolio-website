@@ -1,9 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import SchoolIcon from '@mui/icons-material/School';
-
-const purple = '#a259ff';
-const purpleDark = '#2d1a3a';
+import { Box, Typography, Paper } from "@mui/material";
+import SchoolIcon from "@mui/icons-material/School";
+import { useTheme } from "../ThemeContext";
+import Fade from "@mui/material/Fade";
 
 const education = [
   {
@@ -11,55 +10,83 @@ const education = [
     degree: "BTech in Computer Science",
     period: "July 2018 – July 2022",
     cgpa: "8/10",
-    coursework: "Data Structures and Algorithms, DBMS, Operating System"
-  }
+    coursework: "Data Structures and Algorithms, DBMS, Operating System",
+  },
 ];
 
-export default function EducationCard() {
+export default function Education() {
+  const { theme } = useTheme();
+  const purple = theme === "dark" ? "#a259ff" : "#6c2eb7";
+  const purpleDark = theme === "dark" ? "#2d1a3a" : "#f3eaff";
+  const royalBlue = "#1a237e";
+  const lightGrey = "#f5f6fa";
+
   return (
-    <Box id="education" sx={{ py: 8, px: { xs: 2, sm: 4, md: 6 }, maxWidth: 1100, mx: "auto", fontFamily: 'Fira Mono, monospace', scrollMarginTop: { xs: 70, md: 90 } }}>
-      <Typography
-        variant="h3"
-        component="h2"
-        gutterBottom
-        fontWeight={700}
-        color={purple}
-        mb={4}
+    <Fade in={true} timeout={1200}>
+      <Box
+        id="education"
         sx={{
-          fontFamily: 'Fira Mono, monospace',
-          letterSpacing: 2,
+          py: { xs: 4, sm: 6 },
+          px: { xs: 1, sm: 2, md: 4 },
+          maxWidth: { xs: '100%', md: 1100 },
+          mx: "auto",
+          fontFamily: "Fira Mono, monospace",
+          bgcolor: theme === "light" ? lightGrey : undefined,
         }}
       >
-        Education
-      </Typography>
-      <Box component="div" sx={{
-        p: 4,
-        borderRadius: 4,
-        bgcolor: `linear-gradient(135deg, ${purpleDark} 60%, #3d2c54 100%)`,
-        border: `2px solid ${purple}`,
-        color: purple,
-        fontFamily: 'Fira Mono, monospace',
-        minHeight: 180,
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        position: 'relative',
-        transition: 'transform 0.2s',
-        '&:hover': {
-          transform: 'scale(1.03)',
-          boxShadow: `0 0 32px ${purple}`,
-          borderColor: '#fff',
-        },
-      }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-          <SchoolIcon sx={{ color: purple, fontSize: 36, mr: 1 }} />
-        </Box>
-        <div style={{ fontWeight: 600, fontSize: '1.1rem', color: purple, marginBottom: 8 }}>{education[0].university}</div>
-        <div style={{ color: '#fff', marginBottom: 4 }}>{education[0].degree}<br />{education[0].period}<br />CGPA: {education[0].cgpa}</div>
-        <div style={{ color: purple, marginTop: 8, fontSize: '0.95rem' }}>Coursework: {education[0].coursework}</div>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          fontWeight={700}
+          color={theme === "light" ? royalBlue : purple}
+          mb={4}
+          sx={{
+            fontFamily: "Fira Mono, monospace",
+            letterSpacing: 2,
+            transition: "color 0.3s",
+          }}
+        >
+          Education
+        </Typography>
+        <Paper
+          elevation={4}
+          sx={{
+            p: { xs: 2, sm: 4 },
+            borderRadius: 4,
+            bgcolor: theme === "light" ? lightGrey : purpleDark,
+            border: `2px solid ${purple}`,
+            color: theme === "light" ? royalBlue : "#fff",
+            fontFamily: "Fira Mono, monospace",
+            overflow: "hidden",
+            transition: "box-shadow 0.3s",
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+            <SchoolIcon sx={{ color: theme === "light" ? royalBlue : purple, fontSize: 36, mr: 1 }} />
+          </Box>
+          <div
+            style={{
+              fontWeight: 600,
+              fontSize: "1.1rem",
+              color: theme === "light" ? royalBlue : purple,
+              marginBottom: 8,
+            }}
+          >
+            {education[0].university}
+          </div>
+          <div style={{ color: theme === "light" ? royalBlue : "#fff", marginBottom: 4 }}>
+            {education[0].degree}
+            <br />
+            {education[0].period}
+            <br />
+            CGPA: {education[0].cgpa}
+          </div>
+          <div style={{ color: theme === "light" ? royalBlue : purple, marginTop: 8, fontSize: "0.95rem" }}>
+            Coursework: {education[0].coursework}
+          </div>
+        </Paper>
       </Box>
-    </Box>
+    </Fade>
   );
 }

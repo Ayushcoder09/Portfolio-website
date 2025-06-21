@@ -1,122 +1,85 @@
-import React from "react";
-import { Box, Typography, Chip, Stack, Paper } from "@mui/material";
-
-const purple = "#a259ff";
-const purpleDark = "#2d1a3a";
-
-const techStacks = [
-	{ name: "Java" },
-	{ name: "SQL" },
-	{ name: "JavaScript" },
-	{ name: "TypeScript" },
-	{ name: "AngularJS" },
-	{ name: "ReactJS" },
-	{ name: "HTML" },
-	{ name: "CSS" },
-	{ name: "JQuery" },
-	{ name: "Spring Boot" },
-	{ name: "Spring MVC" },
-	{ name: "Node.js" },
-	{ name: "Git" },
-	{ name: "GitHub" },
-	{ name: "Jenkins" },
-	{ name: "Swagger" },
-	{ name: "Jira" },
-	{ name: "Docker" },
-	{ name: "AWS" },
-	{ name: "Azure DevOps" },
-	{ name: "Veracode" },
-	{ name: "Sonar" },
-	{ name: "Chrome Devtools" },
-	{ name: "Postman" },
-];
+import { Box, Typography, Paper } from "@mui/material";
+import Fade from "@mui/material/Fade";
+import { useTheme } from "../ThemeContext";
 
 export default function About() {
-	return (
-		<Box
-			id="about"
-			sx={{
-				py: 8,
-				px: { xs: 2, sm: 4, md: 6 },
-				maxWidth: 1100,
-				mx: "auto",
-				fontFamily: "Fira Mono, monospace",
-				scrollMarginTop: { xs: 70, md: 90 },
-			}}
-		>
-			<Typography
-				variant="h3"
-				component="h2"
-				gutterBottom
-				fontWeight={700}
-				color={purple}
-				mb={4}
-				sx={{
-					fontFamily: "Fira Mono, monospace",
-					letterSpacing: 2,
-				}}
-			>
-				About Me
-			</Typography>
-			<Paper
-				elevation={4}
-				sx={{
-					p: 4,
-					borderRadius: 4,
-					bgcolor: purpleDark,
-					border: `2px solid ${purple}`,
-					fontFamily: "Fira Mono, monospace",
-					color: "#fff",
-					mb: 2,
-				}}
-			>
-				<Typography
-					variant="body1"
-					sx={{ mb: 3, color: "#fff", fontFamily: "Fira Mono, monospace" }}
-				>
-					With 2.9 years of experience, I specialize in backend systems using Java
-					Spring Boot, microservices, and front-end applications with Angular.
-					Proficient in Agile methodologies and SDLC, I ensure efficient project
-					management. My expertise includes GitHub for code management and Jenkins
-					for CI/CD automation.
-				</Typography>
-				<Typography
-					variant="body2"
-					sx={{ mb: 2, color: purple, fontFamily: "Fira Mono, monospace" }}
-				>
-					<b>Skills/Tools:</b> Java, SQL, JavaScript, TypeScript, HTML, CSS,
-					Angular, Spring Boot, JQuery, React, Maven, Node.js, Git, GitHub,
-					MySQL, Jenkins, Swagger, Github Copilot, AWS, Azure Devops, Jira
-				</Typography>
-				<Stack direction="row" spacing={1} flexWrap="wrap">
-					{techStacks.map((stack) => (
-						<Chip
-							key={stack.name}
-							label={stack.name}
-							sx={{
-								bgcolor: "#20132b",
-								color: purple,
-								border: `1px solid ${purple}`,
-								fontFamily: "Fira Mono, monospace",
-								mb: 1,
-								mx: 0.5,
-								fontWeight: 700,
-								fontSize: "1.05rem",
-								letterSpacing: 1,
-								transition: "all 0.2s",
-								cursor: "pointer",
-								"&:hover": {
-									bgcolor: purple,
-									color: "#fff",
-									borderColor: "#fff",
-									transform: "scale(1.08) rotate(-2deg)",
-								},
-								"&:active": { transform: "scale(0.98)" },
-							}}
-						/>
-					))}
-				</Stack>
-			</Paper>
-		</Box>
-	);
+  const { theme } = useTheme();
+  const purple = theme === "dark" ? "#a259ff" : "#6c2eb7";
+  const purpleDark = theme === "dark" ? "#2d1a3a" : "#f3eaff";
+  const royalBlue = "#1a237e";
+  const lightGrey = "#f5f6fa";
+
+  return (
+    <Fade in={true} timeout={1200}>
+      <Box
+        id="about"
+        sx={{
+          py: { xs: 4, sm: 6 },
+          px: { xs: 1, sm: 2, md: 4 },
+          maxWidth: { xs: "100%", md: 1100 },
+          mx: "auto",
+          fontFamily: "Fira Mono, monospace",
+          bgcolor: theme === "light" ? lightGrey : undefined,
+        }}
+      >
+        {/* Accessibility: Add role, aria-label, tabIndex */}
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          fontWeight={700}
+          color={theme === "light" ? royalBlue : purple}
+          mb={4}
+          sx={{
+            fontFamily: "Fira Mono, monospace",
+            letterSpacing: 2,
+            transition: "color 0.3s",
+            "&:hover": {
+              color: theme === "light" ? royalBlue : "#fff",
+              background:
+                theme === "light"
+                  ? undefined
+                  : `linear-gradient(90deg, ${purple} 0%, #fff 100%)`,
+              WebkitBackgroundClip: theme === "light" ? undefined : "text",
+              WebkitTextFillColor: theme === "light" ? undefined : "transparent",
+            },
+          }}
+        >
+          About Me
+        </Typography>
+        <Paper
+          elevation={4}
+          sx={{
+            p: { xs: 2, sm: 4 },
+            borderRadius: 4,
+            bgcolor: theme === "light" ? lightGrey : purpleDark,
+            border: `2px solid ${purple}`,
+            color: theme === "light" ? royalBlue : "#fff",
+            fontFamily: "Fira Mono, monospace",
+            overflow: "hidden",
+            transition: "box-shadow 0.3s",
+            "&:hover": { boxShadow: `0 0 24px ${purple}` },
+          }}
+        >
+          <Typography
+            variant="body1"
+            color={theme === "light" ? royalBlue : "#fff"}
+            sx={{ fontFamily: "Fira Mono, monospace", mb: 2, transition: "color 0.3s" }}
+          >
+            With 2.9 years of hands-on experience as a Full Stack Developer, I
+            excel in designing and building robust backend systems using Java,
+            Spring Boot, and microservices, as well as delivering dynamic
+            front-end applications with Angular. I am highly skilled in Agile
+            methodologies and the full software development lifecycle (SDLC),
+            ensuring timely and efficient project delivery. My expertise spans
+            cloud platforms (AWS, Azure), CI/CD automation with Jenkins, and
+            collaborative code management using GitHub. I am passionate about
+            solving complex technical challenges, optimizing system performance,
+            and driving innovation in cross-functional teams to deliver impactful
+            business solutions.
+          </Typography>
+        </Paper>
+      </Box>
+    </Fade>
+  );
 }

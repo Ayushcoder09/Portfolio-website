@@ -1,12 +1,55 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and visually engaging portfolio website built with React and Material UI, featuring a terminal-inspired purple theme. This site showcases your professional experience, skills, projects, education, certificates, and achievements in a clean, recruiter-friendly format.
 
-Currently, two official plugins are available:
+## ✨ Features
+- **Hero Banner** with animated typing effect
+- **About** section with professional summary
+- **Experience** and **Projects** with detailed cards
+- **Skills** with animated chips
+- **Certificates** and **Achievements** with icons and consistent card layouts
+- **Education** section
+- **Contact** form with themed input fields and icons
+- **Fully responsive** and mobile-friendly
+- **Smooth anchor navigation** and modern UI/UX
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Material UI](https://mui.com/)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd repoName
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Open in your browser:**
+   Visit [http://localhost:5173](http://localhost:5173) to view your portfolio.
+
+## 📝 Customization
+- Update your content in the `src/components/` files (About, Experience, Projects, Skills, etc.)
+- Change theme colors and Material UI theme settings
+- Add or update images/icons in the `public/` or `src/assets/` folders
+
+## 📦 Build for Production
+```bash
+npm run build
+```
+The optimized site will be in the `dist/` folder.
+
+## 📄 License
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+> Designed and developed by Ayush Maheshwari.
