@@ -261,7 +261,8 @@ export default function Contact() {
             )}
             {sent && !error && (
               <Typography color="success.main" sx={{ mt: 1, width: "100%" }}>
-                Message sent successfully!
+                Your message has been sent successfully! I Will get back to you
+                as soon as possible.
               </Typography>
             )}
           </Box>
