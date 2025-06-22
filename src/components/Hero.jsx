@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import NightlightIcon from "@mui/icons-material/Nightlight";
+import DownloadIcon from "@mui/icons-material/Download";
 import { useTheme } from "../ThemeContext";
 
 const heroSkills = [
@@ -84,23 +85,7 @@ export default function Hero() {
           justifyContent="flex-end"
           mb={2}
         >
-          <Button
-            variant="outlined"
-            color="primary"
-            href={`${import.meta.env.BASE_URL}AyushResume.pdf`}
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-            sx={{
-              borderColor: "#a259ff",
-              color: "#a259ff",
-              fontWeight: 700,
-              fontFamily: "Fira Mono, monospace",
-              ml: 2,
-            }}
-          >
-            Download Resume
-          </Button>
+          {/* Removed original Download Resume button */}
         </Stack>
         <Paper
           elevation={8}
@@ -183,33 +168,66 @@ export default function Hero() {
               </Fade>
             ))}
           </Stack>
-          <Button
-            variant="outlined"
-            size="large"
-            sx={{
-              borderRadius: 2,
-              borderColor: theme === "light" ? royalBlue : purple,
-              color: theme === "light" ? royalBlue : purple,
-              fontWeight: 700,
-              fontFamily: "Fira Mono, monospace",
-              px: { xs: 2, sm: 5 },
-              py: 1.5,
-              fontSize: { xs: "1rem", sm: "1.2rem" },
-              letterSpacing: 1,
-              transition: "all 0.2s",
-              width: { xs: "100%", sm: "auto" },
-              mt: { xs: 2, sm: 0 },
-              "&:hover": {
-                bgcolor: theme === "light" ? royalBlue : purple,
-                color: "#fff",
-                borderColor: "#fff",
-                transform: "scale(1.05)",
-              },
-            }}
-            href="#projects"
-          >
-            View Projects
-          </Button>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ width: '100%', justifyContent: 'center', mt: 2 }}>
+            <Button
+              variant="outlined"
+              size="large"
+              sx={{
+                borderRadius: 2,
+                borderColor: theme === "light" ? royalBlue : purple,
+                color: theme === "light" ? royalBlue : purple,
+                fontWeight: 700,
+                fontFamily: "Fira Mono, monospace",
+                px: { xs: 2, sm: 5 },
+                py: 1.5,
+                fontSize: { xs: "1rem", sm: "1.2rem" },
+                letterSpacing: 1,
+                transition: "all 0.2s",
+                width: { xs: "100%", sm: "auto" },
+                mt: { xs: 2, sm: 0 },
+                "&:hover": {
+                  bgcolor: theme === "light" ? royalBlue : purple,
+                  color: "#fff",
+                  borderColor: "#fff",
+                  transform: "scale(1.05)",
+                },
+              }}
+              href="#projects"
+            >
+              View Projects
+            </Button>
+            <Button
+              variant="outlined"
+              size="large"
+              startIcon={<DownloadIcon />}
+              sx={{
+                borderRadius: 2,
+                borderColor: theme === "light" ? royalBlue : purple,
+                color: theme === "light" ? royalBlue : purple,
+                fontWeight: 700,
+                fontFamily: "Fira Mono, monospace",
+                px: { xs: 2, sm: 5 },
+                py: 1.5,
+                fontSize: { xs: "1rem", sm: "1.2rem" },
+                letterSpacing: 1,
+                transition: "all 0.2s",
+                width: { xs: "100%", sm: "auto" },
+                mt: { xs: 2, sm: 0 },
+                "&:hover": {
+                  bgcolor: theme === "light" ? royalBlue : purple,
+                  color: "#fff",
+                  borderColor: "#fff",
+                  transform: "scale(1.05)",
+                },
+              }}
+              href={`${import.meta.env.BASE_URL}AyushResume.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              Download Resume
+            </Button>
+          </Stack>
         </Paper>
       </Box>
     </Fade>

@@ -68,7 +68,8 @@ export default function Projects() {
                   ? undefined
                   : `linear-gradient(90deg, ${purple} 0%, #fff 100%)`,
               WebkitBackgroundClip: theme === "light" ? undefined : "text",
-              WebkitTextFillColor: theme === "light" ? undefined : "transparent",
+              WebkitTextFillColor:
+                theme === "light" ? undefined : "transparent",
             },
           }}
         >
@@ -114,7 +115,11 @@ export default function Projects() {
                   <Typography
                     variant="body1"
                     color={theme === "light" ? royalBlue : "#fff"}
-                    sx={{ fontFamily: "Fira Mono, monospace", mb: 2, transition: "color 0.3s" }}
+                    sx={{
+                      fontFamily: "Fira Mono, monospace",
+                      mb: 2,
+                      transition: "color 0.3s",
+                    }}
                   >
                     {project.description}
                   </Typography>
@@ -170,7 +175,7 @@ export default function Projects() {
                     }}
                     target="_blank"
                   >
-                    View Project
+                    Live Demo
                   </Button>
                 </Paper>
               </Fade>
